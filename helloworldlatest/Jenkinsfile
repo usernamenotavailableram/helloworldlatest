@@ -5,7 +5,7 @@ pipeline{
         {
             steps{
                  echo "run container"
-                 docker.image(helloworldlatest:0.0.1-SNAPSHOT').pull()
+                 docker.image('helloworldlatest:0.0.1-SNAPSHOT').pull()
 
             }
         }
