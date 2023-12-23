@@ -5,7 +5,7 @@ pipeline{
         {
             steps{
                  echo "ragu build"
-                 sh 'mvn clean package'
+                 bat 'mvn clean package'
             }
         }
         stage('testing')
