@@ -1,12 +1,14 @@
 pipeline{
-    agent any
+    agent {
+    docker{
+    image 'ragu/helloworldapi:v4'
+    }
+    }
     stages{
         stage('run image')
         {
             steps{
-                 echo "run container"
-                 docker.image('ragu/helloworldapi:v4').pull()
-
+                 echo "pull succcess"
             }
         }
 
