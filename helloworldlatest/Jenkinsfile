@@ -5,14 +5,13 @@ pipeline{
         {
             steps{
                  echo "ragu build"
-                 sh 'mvn clean install'
+                 sh 'mvn clean package'
             }
         }
         stage('testing')
         {
             steps{
                  echo "ragu test"
-                 sh 'mvn clean install'
             }
         }
     }
