@@ -1,0 +1,19 @@
+pipeline{
+    agent none
+    stages{
+        stage('build')
+        {
+            steps{
+                 echo "ragu build"
+                 sh 'mvn clean install'
+            }
+        }
+        stage('test')
+        {
+            steps{
+                 echo "ragu test"
+                 sh 'mvn clean install'
+            }
+        }
+    }
+}
