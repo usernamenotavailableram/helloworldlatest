@@ -8,7 +8,7 @@ pipeline{
                  sh 'mvn clean install'
             }
         }
-        stage('test')
+        stage('testing')
         {
             steps{
                  echo "ragu test"
