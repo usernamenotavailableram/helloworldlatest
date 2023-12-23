@@ -1,18 +1,13 @@
 pipeline{
     agent any
     stages{
-        stage('build')
+        stage('run image')
         {
             steps{
-                 echo "ragu build"
-                 bat 'mvn clean package'
+                 echo "run container"
+                 docker.image('helloworldlatest:0.0.1-SNAPSHOT').run('-p 8080:80')
             }
         }
-        stage('testing')
-        {
-            steps{
-                 echo "ragu test"
-            }
-        }
+
     }
 }
